@@ -23,3 +23,13 @@ db.orders.find()
 
 ---
 if you encounter any problems, go to step 2 : `git checkout step2`
+
+## Mission for Step 2
+run the angular project
+```
+cd orders
+ng serve
+```
+
+---
+if you encounter any problems, go to step 3 : `git checkout step3`
