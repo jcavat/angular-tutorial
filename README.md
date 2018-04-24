@@ -7,8 +7,7 @@ npm install
 npm start
 ```
 
-## Step 1 mission:
-
+## Mission for Step 1 
 ### Install angular cli 
 `npm install -g @angular/cli`
 
