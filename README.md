@@ -12,5 +12,12 @@ npm start
 ### Install angular cli 
 * `npm install -g @angular/cli`
 
+### Connect and play with mongodb
+```
+mongo --host eratosthene --port 27017
+use order
+db.orders.find()
+```
+
 ### Create a new angular project
 * ...
