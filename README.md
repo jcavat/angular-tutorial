@@ -20,4 +20,4 @@ db.orders.find()
 ```
 
 ### Create a new angular project
-* ...
+* `ng new orders`
