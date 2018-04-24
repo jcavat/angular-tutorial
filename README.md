@@ -20,3 +20,6 @@ db.orders.find()
 
 ### Create a new angular project
 `ng new orders`
+
+---
+if you encounter any problems, go to step 2 : `git checkout step2`
