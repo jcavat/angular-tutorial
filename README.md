@@ -10,7 +10,7 @@ npm start
 ## Step 1 mission:
 
 ### Install angular cli 
-* `npm install -g @angular/cli`
+`npm install -g @angular/cli`
 
 ### Connect and play with mongodb
 ```
@@ -20,4 +20,4 @@ db.orders.find()
 ```
 
 ### Create a new angular project
-* `ng new orders`
+`ng new orders`
