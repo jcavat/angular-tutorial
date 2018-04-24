@@ -11,7 +11,7 @@ npm start
 ### Install angular cli 
 `npm install -g @angular/cli`
 
-### Connect and play with mongodb
+### Connect and play with mongodb shell v3.6
 ```
 mongo --host eratosthene --port 27017
 use order
