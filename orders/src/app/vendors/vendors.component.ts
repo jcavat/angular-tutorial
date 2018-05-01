@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-vendors',
@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VendorsComponent implements OnInit {
 
-  constructor() { }
+  @Input() title: String;
+  vendorsTitle: String[];
+
+  constructor() {
+    this.vendorsTitle = ["Le petit marché", "le vendeur du dimanche", "Youpie, vous êtes les bienvenus"];
+  }
 
   ngOnInit() {
   }
