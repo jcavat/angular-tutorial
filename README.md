@@ -32,8 +32,9 @@ ng serve
 ```
 
 then:
-* add a **vendors component**, use a **title binding property** and declare a list of strings with fake vendors' title
-* in the related template, expose the title as a html title and place the list of strings inside a bullet list (`ul/li`).
+* add a **vendors component** (`ng generate component vendors`),
+* use a **title binding property** and declare a list of strings with fake vendors' title,
+* in the related template, expose the title as a html title (`h1`) and place the list of strings inside a bullet list (`ul/li`).
 
 ---
 if you encounter any problems, go to step 3 : `git checkout step3`
