@@ -7,11 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class VendorsComponent implements OnInit {
 
-  @Input() title: String;
-  vendorsTitle: String[];
+  @Input() title: string;
+  vendorsTitle: string[];
 
   constructor() {
-    this.vendorsTitle = ["Le petit marché", "le vendeur du dimanche", "Youpie, vous êtes les bienvenus"];
+    this.vendorsTitle = ['Le petit marché', 'le vendeur du dimanche', 'Youpie, vous êtes les bienvenus'];
   }
 
   ngOnInit() {
