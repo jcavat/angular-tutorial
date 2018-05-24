@@ -41,8 +41,7 @@ if you encounter any problems, go to step 3 : `git checkout step3`
 
 ## Mission for Step 3
 * create a repository service helping to access vendors' data,
-* use an abstraction of the service and a fake in-memory implementation,
-* then, use a Rest implementation for accessing data with the `HttpClientModule` to your Rest Api.
+* use an abstraction of the service and a fake in-memory implementation.
 
 ---
 if you encounter any problems, go to step 4 : `git checkout step4`
