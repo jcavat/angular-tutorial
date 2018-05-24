@@ -47,7 +47,7 @@ if you encounter any problems, go to step 3 : `git checkout step3`
 if you encounter any problems, go to step 4 : `git checkout step4`
 
 ## Mission for Step 4
-* do a better abstraction for the order repository taking into account the latency of such a service
+* do a better abstraction for the order repository by taking into account the latency of such a service
 * use a Rest implementation for accessing data with the `HttpClientModule` to your Rest Api.
 
 ---
