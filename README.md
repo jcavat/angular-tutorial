@@ -51,4 +51,4 @@ if you encounter any problems, go to step 4 : `git checkout step4`
 * use a Rest implementation for accessing data with the `HttpClientModule` to your Rest Api.
 
 ---
-if you encounter any problems, go to step 4 : `git checkout step5`
+if you encounter any problems, go to step 5 : `git checkout step5`
