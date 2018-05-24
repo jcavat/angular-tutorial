@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { VendorsComponent } from './vendors/vendors.component';
+import { OrderRepositoryService, FakeOrderRepositoryService } from './vendors/order-repository.service';
 
 
 @NgModule({
@@ -14,7 +15,7 @@ import { VendorsComponent } from './vendors/vendors.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [{provide: OrderRepositoryService, useClass: FakeOrderRepositoryService}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { OrderRepositoryService } from './order-repository.service';
 
 @Component({
   selector: 'app-vendors',
@@ -10,8 +11,8 @@ export class VendorsComponent implements OnInit {
   @Input() title: string;
   vendorsTitle: string[];
 
-  constructor() {
-    this.vendorsTitle = ['Le petit marché', 'le vendeur du dimanche', 'Youpie, vous êtes les bienvenus'];
+  constructor(private readonly orderRepository: OrderRepositoryService) {
+    this.vendorsTitle = orderRepository.vendors();
   }
 
   ngOnInit() {
