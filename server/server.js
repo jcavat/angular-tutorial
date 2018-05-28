@@ -48,7 +48,7 @@ MongoClient.connect('mongodb://129.194.184.60:27017', (err, database) => {
     //res.setHeader('Content-Type', 'application/json');
     //db.distinct("vendors.slug", {}, (err, data) => res.json(data));
     db.aggregate(
-      [ {$project: { items: 1 } }, {$unwind: "$items"}, {$group: {_id: "$items.vendor", products: {$addToSet: "$items.category"}, sum: {$sum: 1} } } ] 
+      [ {$project: { items: 1 } }, {$unwind: "$items"}, {$group: {_id: "$items.vendor", categories: {$addToSet: "$items.category"}, sum: {$sum: 1} } } ] 
     ).toArray( (err, data) => res.send(data));
   });
 
@@ -56,7 +56,7 @@ MongoClient.connect('mongodb://129.194.184.60:27017', (err, database) => {
     const id = req.params.id;
     console.log(id);
     db.aggregate(
-      [ {$project: { items: 1 } }, {$unwind: "$items"}, {$group: {_id: "$items.vendor", category: {$addToSet:
+      [ {$project: { items: 1 } }, {$unwind: "$items"}, {$group: {_id: "$items.vendor", categories: {$addToSet:
         "$items.category"}, products: {$addToSet: "$items.title"} } }, {$match: {_id: id}} ]
     ).toArray( (err, data) => res.send(data));
   });
