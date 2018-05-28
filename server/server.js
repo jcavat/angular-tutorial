@@ -54,7 +54,6 @@ MongoClient.connect('mongodb://129.194.184.60:27017', (err, database) => {
 
   app.get("/vendorsdetails/:id", (req, res) => {
     const id = req.params.id;
-    console.log(id);
     db.aggregate(
       [ {$project: { items: 1 } }, {$unwind: "$items"}, {$group: {_id: "$items.vendor", category: {$addToSet:
         "$items.category"}, products: {$addToSet: "$items.title"} } }, {$match: {_id: id}} ]
