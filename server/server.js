@@ -44,11 +44,11 @@ MongoClient.connect('mongodb://129.194.184.60:27017', (err, database) => {
     db.distinct("vendors.slug", {}, (err, data) => res.json(data));
   });
 
-  app.get("/orders", (req, res) => {
+  app.get("/vendorsdetails", (req, res) => {
     //res.setHeader('Content-Type', 'application/json');
     //db.distinct("vendors.slug", {}, (err, data) => res.json(data));
     db.aggregate(
-      [{ $unwind: "$vendors" }, {$project: {vendors: "$vendors.slug"}}, {$group: {_id: {vendor: "$vendors"}, "nb": {$sum: 1}}} ]
+      [ {$project: { items: 1 } }, {$unwind: "$items"}, {$group: {_id: "$items.vendor", products: {$addToSet: "$items.category"}, sum: {$sum: 1} } } ] 
     ).toArray( (err, data) => res.send(data));
   });
 
@@ -59,5 +59,6 @@ MongoClient.connect('mongodb://129.194.184.60:27017', (err, database) => {
       [{ $unwind: "$items" }, { $project: { item: "$items" } }, { $group: { _id: "$item", sum: { $sum: 1 }, finalprice: { $sum: "$item.finalprice" } } }]
     ).toArray( (err, data) => res.send(data));
   });
+
 
 })
