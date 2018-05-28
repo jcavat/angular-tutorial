@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { VendorsComponent } from './vendors/vendors.component';
-import { OrderRepositoryService, FakeOrderRepositoryService } from './vendors/order-repository.service';
+import { OrderRepositoryService, FakeOrderRepositoryService, RestOrderRepositoryService } from './vendors/order-repository.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -13,9 +14,10 @@ import { OrderRepositoryService, FakeOrderRepositoryService } from './vendors/or
     VendorsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [{provide: OrderRepositoryService, useClass: FakeOrderRepositoryService}],
+  providers: [{provide: OrderRepositoryService, useClass: RestOrderRepositoryService}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

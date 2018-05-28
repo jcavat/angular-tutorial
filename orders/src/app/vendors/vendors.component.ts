@@ -12,7 +12,7 @@ export class VendorsComponent implements OnInit {
   vendorsTitle: string[];
 
   constructor(private readonly orderRepository: OrderRepositoryService) {
-    this.vendorsTitle = orderRepository.vendors();
+    orderRepository.vendors().subscribe( names => this.vendorsTitle = names);
   }
 
   ngOnInit() {
