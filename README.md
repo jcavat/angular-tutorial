@@ -55,6 +55,7 @@ if you encounter any problems, go to step 5 : `git checkout step5`
 
 ## Mission for Step 5
 * do routes for `/vendorsdetails` and `/vendorsdetails/:id` in OrderRepositoryService
+* use a VendorDetail class using title, categories and products fields
 * transform the vendors component to use a set of cards 
 * create a VendorCard component to add more details on a specifi vendor. Use a badge for the sum of commands per vendors and a list of products
 
