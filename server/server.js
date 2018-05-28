@@ -52,6 +52,15 @@ MongoClient.connect('mongodb://129.194.184.60:27017', (err, database) => {
     ).toArray( (err, data) => res.send(data));
   });
 
+  app.get("/vendorsdetails/:id", (req, res) => {
+    const id = req.params.id;
+    console.log(id);
+    db.aggregate(
+      [ {$project: { items: 1 } }, {$unwind: "$items"}, {$group: {_id: "$items.vendor", category: {$addToSet:
+        "$items.category"}, products: {$addToSet: "$items.title"} } }, {$match: {_id: id}} ]
+    ).toArray( (err, data) => res.send(data));
+  });
+
   app.get("/items", (req, res) => {
     //res.setHeader('Content-Type', 'application/json');
     //db.distinct("vendors.slug", {}, (err, data) => res.json(data));
