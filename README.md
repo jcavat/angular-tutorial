@@ -52,3 +52,8 @@ if you encounter any problems, go to step 4 : `git checkout step4`
 
 ---
 if you encounter any problems, go to step 5 : `git checkout step5`
+
+## Mission for Step 5
+* do routes for `/vendorsdetails` and `/vendorsdetails/:id` in OrderRepositoryService
+* transform the vendors component to use a set of cards 
+* create a VendorCard component to add more details on a specifi vendo. Use a badge for the sum of commands per vendors and a list of products
