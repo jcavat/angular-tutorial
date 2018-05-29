@@ -45,8 +45,6 @@ export class RestOrderRepositoryService extends OrderRepositoryService {
   }
 
   vendors(): Observable<string[]> {
-    this.vendorsDetails().subscribe( a => console.log(a) );
-    this.vendorDetails('gamadiame').subscribe( a => console.log(a) );
     return this.http.get<string[]>('http://localhost:3000/vendors');
   }
 

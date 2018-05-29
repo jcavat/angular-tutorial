@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { VendorsComponent } from './vendors/vendors.component';
 import { OrderRepositoryService, FakeOrderRepositoryService, RestOrderRepositoryService } from './vendors/order-repository.service';
 import { HttpClientModule } from '@angular/common/http';
+import { VendorCardComponent } from './vendor-card/vendor-card.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    VendorsComponent
+    VendorsComponent,
+    VendorCardComponent
   ],
   imports: [
     BrowserModule,

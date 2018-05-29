@@ -1,5 +1,5 @@
 <h1>{{ title }}</h1>
 
-<ul>
-  <li *ngFor="let vt of vendorsTitle">{{ vt }}</li>
-</ul>
+<div *ngFor="let vt of vendorsDetails">
+  <app-vendor-card [vendor]="vt"></app-vendor-card>
+</div>

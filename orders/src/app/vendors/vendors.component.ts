@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { OrderRepositoryService } from './order-repository.service';
+import { VendorDetails } from './vendor-details';
 
 @Component({
   selector: 'app-vendors',
@@ -9,10 +10,10 @@ import { OrderRepositoryService } from './order-repository.service';
 export class VendorsComponent implements OnInit {
 
   @Input() title: string;
-  vendorsTitle: string[];
+  vendorsDetails: VendorDetails[];
 
   constructor(private readonly orderRepository: OrderRepositoryService) {
-    orderRepository.vendors().subscribe( names => this.vendorsTitle = names);
+    orderRepository.vendorsDetails().subscribe( vendors => this.vendorsDetails = vendors);
   }
 
   ngOnInit() {

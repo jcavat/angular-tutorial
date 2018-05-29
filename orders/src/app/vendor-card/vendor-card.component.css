@@ -1,0 +1,11 @@
+.card {
+    float: left;
+    margin: 0 1em 1em 0;
+    min-height: 16em;
+    width: 18rem;
+}
+
+.badge {
+    margin-left: 4px;
+    font-size: 50%;
+}

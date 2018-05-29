@@ -1,9 +1,9 @@
 export class VendorDetails {
 
-    private title: string;
-    private categories: string[];
-    private products: string[];
-    private sum: number;
+    readonly title: string;
+    readonly categories: string[];
+    readonly products: string[];
+    readonly sum: number;
 
     constructor(title: string, sum: number, categories: string[], products: string[] = []) {
         this.title = title;
