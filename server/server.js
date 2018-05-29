@@ -56,8 +56,8 @@ MongoClient.connect('mongodb://129.194.184.60:27017', (err, database) => {
     const id = req.params.id;
     db.aggregate(
       [ {$project: { items: 1 } }, {$unwind: "$items"}, {$group: {_id: "$items.vendor", categories: {$addToSet:
-        "$items.category"}, products: {$addToSet: "$items.title"} } }, {$match: {_id: id}} ]
-    ).toArray( (err, data) => res.send(data));
+        "$items.category"}, products: {$addToSet: "$items.title"}, sum: {$sum: 1} } }, {$match: {_id: id}} ]
+    ).toArray( (err, data) => res.send(data[0]));
   });
 
   app.get("/items", (req, res) => {
