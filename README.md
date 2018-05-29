@@ -61,3 +61,10 @@ if you encounter any problems, go to step 5 : `git checkout step5`
 
 ---
 if you encounter any problems, go to step 6 : `git checkout step6`
+
+## Mission for Step 6
+* route to a `VendorDetails` component when we select a vendor
+* use a `pipe` to transform the vendor id to a capitalized title (this-is-a-shop become This Is A Shop)
+
+---
+if you encounter any problems, go to step 7 : `git checkout step7`
