@@ -8,6 +8,8 @@ import { OrderRepositoryService, FakeOrderRepositoryService, RestOrderRepository
 import { HttpClientModule } from '@angular/common/http';
 import { VendorCardComponent } from './vendor-card/vendor-card.component';
 import { CapitalizePipe } from './capitalize.pipe';
+import { AppRoutingModule } from './/app-routing.module';
+import { VendorDetailsComponent } from './vendor-details/vendor-details.component';
 
 
 @NgModule({
@@ -15,11 +17,13 @@ import { CapitalizePipe } from './capitalize.pipe';
     AppComponent,
     VendorsComponent,
     VendorCardComponent,
-    CapitalizePipe
+    CapitalizePipe,
+    VendorDetailsComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [{provide: OrderRepositoryService, useClass: RestOrderRepositoryService}],
   bootstrap: [AppComponent]

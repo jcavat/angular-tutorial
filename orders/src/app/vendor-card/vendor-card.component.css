@@ -9,3 +9,7 @@
     margin-left: 4px;
     font-size: 50%;
 }
+
+.card-body {
+    background-color: papayawhip;
+}
